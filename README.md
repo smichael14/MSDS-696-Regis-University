@@ -118,7 +118,6 @@ order_products <- cleaned_sales %>%
 top_10_Products <- as.data.frame(head(order_products, 10))
 top_10_Products
 ```
-![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/5%20top%20plot.GIF)
 
 #### Top 10 products sold
 
@@ -136,6 +135,7 @@ ggplot(data = top_10_Products) +
   coord_flip()
 ```
 
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/5%20top%20plot.GIF)
 
 #### Purchases by Age
 
