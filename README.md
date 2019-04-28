@@ -118,7 +118,7 @@ order_products <- cleaned_sales %>%
 top_10_Products <- as.data.frame(head(order_products, 10))
 top_10_Products
 ```
-![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/6%20age%20purchase.GIF)
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/5%20top%20plot.GIF)
 
 #### Top 10 products sold
 
@@ -155,6 +155,7 @@ consumer_age <- cleaned_sales %>%
                 x = "Age Groups",
                 title = "Bar Chart")
 ```
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/6%20age%20purchase.GIF)
 
 #### Puchases by City Category
 
@@ -174,6 +175,8 @@ consumer_city <- cleaned_sales %>%
                 x = "City Category",
                 title = "Bar Chart")
 ```
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/7%20purchase%20cit.GIF)
+
 #### Purchaces per Occupation  
 
 ```{r}
@@ -193,6 +196,7 @@ consumer_city <- cleaned_sales %>%
                 x = "Occupation Category",
                 title = "Bar Chart")
 ```
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/8%20purchase%20occupation.GIF)
 
 #### Stay in Current City vs Purchase  
 
@@ -213,6 +217,7 @@ consumer_Stay_In_Current_City_Years <- cleaned_sales %>%
                 x = "Stay In Current City Years",
                 title = "Bar Chart")
 ```
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/9%20purchase%20city%20stay.GIF)
 
 #### Multi-Dimentional Plotting
 
@@ -226,6 +231,7 @@ ggplot(data = cleaned_sales) +
     subtitle = "Age, Purchase, Gender") +
   theme_minimal()
 ```
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/10%20box%20plot%20age.GIF)
 
 ```{r}
 # create a plot to illustrates Consumers City vs Age vs Gender vs Purchases
@@ -238,7 +244,7 @@ ggplot(data = cleaned_sales) +
   theme_minimal() +
   facet_wrap(vars(Age))
 ```
-
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/11%20facet%20wrap%20gender.GIF)
 
 
 ```{r}
@@ -253,7 +259,7 @@ ggplot(data = cleaned_sales) +
     subtitle = "Age, Purchase, Gender and City Category")+
   facet_wrap(vars(Gender))
 ```
-
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/12%20age%20purchase%20gender%20city.GIF)
 
 ```{r}
 ggplot(data = cleaned_sales) +
@@ -267,6 +273,7 @@ ggplot(data = cleaned_sales) +
     subtitle = "Age vs Purchases ") +
     facet_wrap(vars(Gender))
 ```
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/13%20facet%20wrap%20gender.GIF)
 
 ```{r}
 ggplot(data = cleaned_sales) +
@@ -277,6 +284,7 @@ ggplot(data = cleaned_sales) +
     caption = "Black Friday Dataset") +
   theme(legend.position = 'left')
 ```
+[alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/14%20Normalized.GIF)
 
 # Data Modeling
 
