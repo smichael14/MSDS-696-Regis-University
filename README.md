@@ -348,7 +348,9 @@ head(augment(P002652422_model))
 
 
 ## Build Model for the complete dataset
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/18.GIF)
 
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/19.GIF)
 
 ```{r}
 # removing unique values for model creation
@@ -537,5 +539,5 @@ test_predict <- predict(best_model, test_sales)$predictions
 # compare mean absolute error
 mae(test_actual, test_predict)
 ```
-
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/20.GIF)
 
