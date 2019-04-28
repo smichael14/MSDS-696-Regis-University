@@ -49,6 +49,7 @@ sales <- read.csv("C:/Users/shawn/OneDrive/Regis/MSDS 696/Shawn Michael Final Pr
 # glimse allows to view the data quickly and in an organized manner
 glimpse(sales)
 ```
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/1%20dd%20glimpse.GIF)
 
 Investigate the data to get an understanding what is in the dataset.
 
