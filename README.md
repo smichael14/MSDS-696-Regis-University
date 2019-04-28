@@ -57,6 +57,7 @@ Investigate the data to get an understanding what is in the dataset.
 # skim is simular to summary, however it provides much more information
 skim(sales)
 ```
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/2%20skim.GIF)
 
 After looking at the dataset, you can see from the output that I have two datafields that contain NA's.  In addition, Occupation and Marital_Status are listed as integers, but probably better servered as factors since they both contain finite sets.
 
@@ -71,6 +72,7 @@ cleaned_sales <- sales %>%
 # skim cleaned dataset
 skim(cleaned_sales)
 ```
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/3%20cleaned.GIF)
 
 ### Understanding the data  
 
@@ -88,6 +90,7 @@ Consumer_Genders <- cleaned_sales %>%
 
 summary(Consumer_Genders$Gender)
 ```
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/4%20m%20f%20plot.GIF)
 
 As you can see, males represent 72% of the total sales.
 
@@ -102,6 +105,7 @@ As you can see, males represent 72% of the total sales.
                 title = "Bar Chart")
 ```
 
+
 Creating a view to see with products have the most sales
 
 ```{r}
@@ -114,6 +118,7 @@ order_products <- cleaned_sales %>%
 top_10_Products <- as.data.frame(head(order_products, 10))
 top_10_Products
 ```
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/6%20age%20purchase.GIF)
 
 #### Top 10 products sold
 
