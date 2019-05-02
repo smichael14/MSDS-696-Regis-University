@@ -335,7 +335,7 @@ tidy(P002652422_model)
 Glance extracts the statistics of a model and places them in a useable data frame.
 
 ```{r}
-# view the statical 
+# view the statistical values
 glance(P002652422_model)
 ```
 
