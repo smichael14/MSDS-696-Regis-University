@@ -135,7 +135,7 @@ ggplot(data = top_10_Products) +
   coord_flip()
 ```
 
-![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/5%20top%20plot.GIF)
+![alt text](https://github.com/smichael14/MSDS-696-Regis-University/blob/master/5%20top%20plot.GIF)
 
 #### Purchases by Age
 
