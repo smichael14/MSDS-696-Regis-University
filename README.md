@@ -284,7 +284,7 @@ ggplot(data = cleaned_sales) +
     caption = "Black Friday Dataset") +
   theme(legend.position = 'left')
 ```
-[alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/14%20Normalized.GIF)
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/14%20Normalized.GIF)
 
 # Data Modeling
 
