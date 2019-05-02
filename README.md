@@ -128,8 +128,8 @@ ggplot(data = top_10_Products) +
   geom_bar() +
   scale_fill_viridis_d(option  = "viridis") +
   labs(title = 'Top 10 Products',
-    x = 'Sales Count',
-    y = 'Product ID',
+    y = 'Sales Count',
+    x = 'Product ID',
     caption = 'Black Friday Dataset',
     subtitle = 'Most Popular Products') +
   coord_flip()
