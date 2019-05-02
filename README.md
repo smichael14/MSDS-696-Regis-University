@@ -8,7 +8,7 @@ output:
 ---
 # Shawn Michael
 # Regis University
-
+ 
 ### Loading Libraries
 ```{r message=FALSE, warning=FALSE}
 # libraries required for exploring data
