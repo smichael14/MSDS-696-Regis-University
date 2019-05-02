@@ -46,7 +46,7 @@ sales <- read.csv("C:/Users/shawn/OneDrive/Regis/MSDS 696/Shawn Michael Final Pr
 # Data Discovery  
 
 ```{r}
-# glimse allows to view the data quickly and in an organized manner
+# glimpse allows to view the data quickly and in an organized manner
 glimpse(sales)
 ```
 ![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/1%20dd%20glimpse.GIF)
@@ -54,12 +54,12 @@ glimpse(sales)
 Investigate the data to get an understanding what is in the dataset.
 
 ```{r}
-# skim is simular to summary, however it provides much more information
+# skim is similar to summary, however it provides much more information
 skim(sales)
 ```
 ![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/2%20skim.GIF)
 
-After looking at the dataset, you can see from the output that I have two datafields that contain NA's.  In addition, Occupation and Marital_Status are listed as integers, but probably better servered as factors since they both contain finite sets.
+After looking at the dataset, you can see from the output that I have two data fields that contain NA's.  In addition, Occupation and Marital_Status are listed as integers, but probably better served as factors since they both contain finite sets.
 
 ```{r}
 # converting missing data NAs to 0 and converting Occupation & Marital to factors
@@ -177,7 +177,7 @@ consumer_city <- cleaned_sales %>%
 ```
 ![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/7%20purchase%20cit.GIF)
 
-#### Purchaces per Occupation  
+#### Purchases per Occupation  
 
 ```{r}
 # dataset that groups consumers by Occupation
@@ -219,7 +219,7 @@ consumer_Stay_In_Current_City_Years <- cleaned_sales %>%
 ```
 ![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/9%20purchase%20city%20stay.GIF)
 
-#### Multi-Dimentional Plotting
+#### Multi-Dimensional Plotting
 
 ```{r}
 # 3D plot illustrating Gender, Age vs purchases 
@@ -332,14 +332,14 @@ Viewing the statistical analysis of the model, through tidy.  These values are t
 tidy(P002652422_model)
 ```
  
-Glance extracts the statistics of a model and places them in a useable dataframe.
+Glance extracts the statistics of a model and places them in a useable data frame.
 
 ```{r}
 # view the statical 
 glance(P002652422_model)
 ```
 
-Augment from the Broom Toolkit sums prediction columns to the dataset that is being modeled. I am building an observational dataframe, which contains data to build the model and the predicted model for each observation in the column .fitted.   
+Augment from the Broom Toolkit sums prediction columns to the dataset that is being modeled. I am building an observational data frame, which contains data to build the model and the predicted model for each observation in the column .fitted.   
 
 ```{r}
 #
@@ -371,7 +371,7 @@ test_sales <- testing(sales_split)
 nrow(train_sales)
 nrow(test_sales)
 ```
-The output above is to demonstate the split of data.  
+The output above is to demonstrate the split of data.  
 
 Below 
 
@@ -405,10 +405,10 @@ cross_validation_models_lm
 
 ### Validation and performance of models
 
-I nedd to add the actual and predicted columns to the model.
+I need to add the actual and predicted columns to the model.
 
 ```{r}
-# prepard actual and predicted values for comparision 
+# prepared  actual and predicted values for comparison  
 cross_validation_prep_lm <- cross_validation_models_lm %>%
   mutate(validate_actual = map(validate, ~.x$Purchase),
          validate_predicted = map2(model, validate, ~predict(.x, .y)))
@@ -416,7 +416,7 @@ cross_validation_prep_lm
 ```
 
 ```{r}
-# MAE caclulation
+# MAE calculation
 # map2 will produce a double vector, instead of a list
 cross_validation_eval_lm <- cross_validation_prep_lm %>%
   mutate(validate_mae = map2_dbl(validate_actual, validate_predicted,
@@ -442,7 +442,7 @@ cv_prep_rf <- cv_models_rf %>%
          validate_predicted = map2(.x = model, .y = validate, ~predict(.x, .y)$predictions))
 ```
 
-Map2 interates over all of the folds and mtry parameters, to build a new ranger models for each fold and mtry combinations.
+Map2 iterates over all of the folds and mtry parameters, to build a new ranger models for each fold and mtry combinations.
 
 ```{r}
 # Calculate validate MAE for each fold and mtry combination
@@ -467,7 +467,7 @@ mean(cv_eval_rf$validate_mae)
 
 
 ```{r}
-# Prepare for tuning your cross validation folds by varying mtry
+# Prepare for tuning your cross-validation folds by varying mtry
 cross_validation_tune <- cross_validation_data %>%
   crossing(mtry = 2:5)
 ```
@@ -505,13 +505,13 @@ cross_validation_eval_tune_rf %>%
 
 
 # Measuring the Test Performance
-Step on in the process was spliting my data into two main sections, train and test.  In this case, I intentionally left out the test portion in order to evaluate the final model with an independent set of data. 
+Step on in the process was splitting my data into two main sections, train and test.  In this case, I intentionally left out the test portion in order to evaluate the final model with an independent set of data. 
 
 I used the train data and split it into iterative sections of Train and Validate so I was able to cross validate the data for a more accurate means of model selection.
 
-Each train iteraction was leveraged to build a model, and I held out the validate portion so I could validate my iterative model.
+Each train interaction was leveraged to build a model, and I held out the validate portion so I could validate my iterative model.
 
-The results created a means of evaluating validation performance for every cross validation fold on each model.  I could then aggregate validation performance for each model to determine which model was truly performing the best overall. 
+The results created a means of evaluating validation performance for every cross-validation fold on each model.  I could then aggregate validation performance for each model to determine which model was truly performing the best overall. 
 
 
 ```{r}
