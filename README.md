@@ -508,7 +508,7 @@ cross_validation_eval_tune_rf %>%
 
 
 # Measuring the Test Performance
-Step on in the process was splitting my data into two main sections, train and test.  In this case, I intentionally left out the test portion in order to evaluate the final model with an independent set of data. 
+Step one in the process was splitting my data into two main sections, train and test.  In this case, I intentionally left out the test portion in order to evaluate the final model with an independent set of data. 
 
 I used the train data and split it into iterative sections of Train and Validate so I was able to cross validate the data for a more accurate means of model selection.
 
