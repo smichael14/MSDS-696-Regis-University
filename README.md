@@ -1,14 +1,17 @@
 # MSDS-696-Regis-University
+Shawn Michael
+Regis University
 
----
-title: "MSDS 696"
-output:
-  html_document:
-    df_print: paged
----
-# Shawn Michael
-# Regis University
- 
+
+The purpose of the Black Friday data collection is to gain a deeper understanding of demographics pertaining to the customers they service versus the products offered by the business.  The data analysis was completed with R, using several packages such as: tidyverse, broom and ranger.  
+In addition to investigating the relationships between consumers and products, I wanted to create models for predicting the product sales.  It is important to note, that the models I am creating do not follow the typical creation approach.  Instead of creating a model for the whole dataset with a single prediction model, I created thousands of models, one for each product offering.  Then I took the mean calculation of MAE from each model. 
+This is powerful for several reasons:
+     1.	Forecasting individual projects
+     2.	Forecasting groups of products (top 10 or categorical)
+     3.	Statistic and Coefficients are available for each model for analysis
+Since the dataset was used as a competition in the past, I wanted to see if I could improve on the results I was seeing from other competitors.  Based on the results that were still available, my model output values are among the top finishers. 
+
+
 ### Loading Libraries
 ```{r message=FALSE, warning=FALSE}
 # libraries required for exploring data
