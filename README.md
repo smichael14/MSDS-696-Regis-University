@@ -52,7 +52,8 @@ sales <- read.csv("C:/Users/shawn/OneDrive/Regis/MSDS 696/Shawn Michael Final Pr
 # glimpse allows to view the data quickly and in an organized manner
 glimpse(sales)
 ```
-![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/1%20dd%20glimpse.GIF)
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/Images/1%20dd%20glimpse.GIF)
+
 
 Investigate the data to get an understanding what is in the dataset.
 
@@ -60,7 +61,7 @@ Investigate the data to get an understanding what is in the dataset.
 # skim is similar to summary, however it provides much more information
 skim(sales)
 ```
-![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/2%20skim.GIF)
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/Images/2%20skim.GIF)
 
 After looking at the dataset, you can see from the output that I have two data fields that contain NA's.  In addition, Occupation and Marital_Status are listed as integers, but probably better served as factors since they both contain finite sets.
 
@@ -75,7 +76,7 @@ cleaned_sales <- sales %>%
 # skim cleaned dataset
 skim(cleaned_sales)
 ```
-![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/3%20cleaned.GIF)
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/Images/3%20cleaned.GIF)
 
 ### Understanding the data  
 
@@ -93,7 +94,7 @@ Consumer_Genders <- cleaned_sales %>%
 
 summary(Consumer_Genders$Gender)
 ```
-![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/4%20m%20f%20plot.GIF)
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/Images/4%20m%20f%20plot.GIF)
 
 As you can see, males represent 72% of the total sales.
 
@@ -138,7 +139,7 @@ ggplot(data = top_10_Products) +
   coord_flip()
 ```
 
-![alt text](https://github.com/smichael14/MSDS-696-Regis-University/blob/master/5%20top%20plot.GIF)
+![alt text](https://github.com/smichael14/MSDS-696-Regis-University/blob/master/Images/5%20top%20plot.GIF)
 
 #### Purchases by Age
 
@@ -158,7 +159,7 @@ consumer_age <- cleaned_sales %>%
                 x = "Age Groups",
                 title = "Bar Chart")
 ```
-![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/6%20age%20purchase.GIF)
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/Images/6%20age%20purchase.GIF)
 
 #### Puchases by City Category
 
@@ -178,7 +179,7 @@ consumer_city <- cleaned_sales %>%
                 x = "City Category",
                 title = "Bar Chart")
 ```
-![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/7%20purchase%20cit.GIF)
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/Images/7%20purchase%20cit.GIF)
 
 #### Purchases per Occupation  
 
@@ -199,7 +200,7 @@ consumer_city <- cleaned_sales %>%
                 x = "Occupation Category",
                 title = "Bar Chart")
 ```
-![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/8%20purchase%20occupation.GIF)
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/Images/8%20purchase%20occupation.GIF)
 
 #### Stay in Current City vs Purchase  
 
@@ -220,7 +221,7 @@ consumer_Stay_In_Current_City_Years <- cleaned_sales %>%
                 x = "Stay In Current City Years",
                 title = "Bar Chart")
 ```
-![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/9%20purchase%20city%20stay.GIF)
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/Images/9%20purchase%20city%20stay.GIF)
 
 #### Multi-Dimensional Plotting
 
@@ -234,7 +235,7 @@ ggplot(data = cleaned_sales) +
     subtitle = "Age, Purchase, Gender") +
   theme_minimal()
 ```
-![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/10%20box%20plot%20age.GIF)
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/Images/10%20box%20plot%20age.GIF)
 
 ```{r}
 # create a plot to illustrates Consumers City vs Age vs Gender vs Purchases
@@ -247,7 +248,7 @@ ggplot(data = cleaned_sales) +
   theme_minimal() +
   facet_wrap(vars(Age))
 ```
-![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/11%20facet%20wrap%20gender.GIF)
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/Images/11%20facet%20wrap%20gender.GIF)
 
 
 ```{r}
@@ -262,7 +263,7 @@ ggplot(data = cleaned_sales) +
     subtitle = "Age, Purchase, Gender and City Category")+
   facet_wrap(vars(Gender))
 ```
-![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/12%20age%20purchase%20gender%20city.GIF)
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/Images/12%20age%20purchase%20gender%20city.GIF)
 
 ```{r}
 ggplot(data = cleaned_sales) +
@@ -276,7 +277,7 @@ ggplot(data = cleaned_sales) +
     subtitle = "Age vs Purchases ") +
     facet_wrap(vars(Gender))
 ```
-![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/13%20facet%20wrap%20gender.GIF)
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/Images/13%20facet%20wrap%20gender.GIF)
 
 ```{r}
 ggplot(data = cleaned_sales) +
@@ -287,7 +288,7 @@ ggplot(data = cleaned_sales) +
     caption = "Black Friday Dataset") +
   theme(legend.position = 'left')
 ```
-![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/14%20Normalized.GIF)
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/Images/14%20Normalized.GIF)
 
 # Data Modeling
 
@@ -351,9 +352,9 @@ head(augment(P002652422_model))
 
 
 ## Build Model for the complete dataset
-![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/18.GIF)
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/Images/18.GIF)
 
-![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/19.GIF)
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/Images/19.GIF)
 
 ```{r}
 # removing unique values for model creation
@@ -542,5 +543,5 @@ test_predict <- predict(best_model, test_sales)$predictions
 # compare mean absolute error
 mae(test_actual, test_predict)
 ```
-![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/20.GIF)
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/Images/20.GIF)
 
