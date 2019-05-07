@@ -52,7 +52,7 @@ sales <- read.csv("C:/Users/shawn/OneDrive/Regis/MSDS 696/Shawn Michael Final Pr
 # glimpse allows to view the data quickly and in an organized manner
 glimpse(sales)
 ```
-![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/Images/1%20dd%20glimpse.GIF)
+![alt text](https://github.com/smichael14/MSDS-696-Regis-University/blob/master/Images/1%20dd%20glimpse.GIF)
 
 
 Investigate the data to get an understanding what is in the dataset.
@@ -61,7 +61,7 @@ Investigate the data to get an understanding what is in the dataset.
 # skim is similar to summary, however it provides much more information
 skim(sales)
 ```
-![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/Images/2%20skim.GIF)
+![alt text](https://github.com/smichael14/MSDS-696-Regis-University/blob/master/Images/2%20skim.GIF)
 
 After looking at the dataset, you can see from the output that I have two data fields that contain NA's.  In addition, Occupation and Marital_Status are listed as integers, but probably better served as factors since they both contain finite sets.
 
@@ -76,7 +76,7 @@ cleaned_sales <- sales %>%
 # skim cleaned dataset
 skim(cleaned_sales)
 ```
-![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/Images/3%20cleaned.GIF)
+![alt text](https://github.com/smichael14/MSDS-696-Regis-University/blob/master/Images/3%20cleaned.GIF)
 
 ### Understanding the data  
 
