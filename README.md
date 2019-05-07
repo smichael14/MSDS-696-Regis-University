@@ -76,7 +76,7 @@ cleaned_sales <- sales %>%
 # skim cleaned dataset
 skim(cleaned_sales)
 ```
-![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/Images/3%20cleaned.GIF)
+![alt text]( https://github.com/smichael14/MSDS-696-Regis-University/blob/master/Images/3cleaned.GIF)
 
 ### Understanding the data  
 
