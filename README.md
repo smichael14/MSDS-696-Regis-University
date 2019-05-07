@@ -8,7 +8,7 @@ In addition to investigating the relationships between consumers and products, I
 This is powerful for several reasons:
      1.	Forecasting individual projects
      2.	Forecasting groups of products (top 10 or categorical)
-     3.	Statistic and Coefficients are available for each model for analysis
+     3.	Statistic and Coefficients are available for each model for analysis.
 Since the dataset was used as a competition in the past, I wanted to see if I could improve on the results I was seeing from other competitors.  Based on the results that were still available, my model output values are among the top finishers. 
 
 
